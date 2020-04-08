@@ -775,14 +775,6 @@ CMD1 &| CMD2                            # stdout + stderr -> pipe
 cat > FILE << EOF ... EOF               # ^^^ for writing a file
 <<< "STRING"                            # here string
 <( CMD )                                # create a temporary named pipe
-diff `old` `new`	                # diff the output of two commands (diff old new) #201
-diff `old` `new` | less		        # diff the output of two commands and send to less
-space to jump page at a time, enter to jump line at a time
-arrow to left says old hs what new doesn't
-arrow to right says new has what old doesn't
-line numbers before arrows: a -> add, d -> delete, c -> change
-diff -y `old` `new` | less		#does side by side
-diff -w 200 -y `old` `new` | less	#does side by side with line width of 200
 
 exec > >(tee logfile.txt); exec 2>&1;   # copy stdout and stderr to log file
 exec 1<&-                               # close stdout file descriptor
@@ -790,10 +782,11 @@ exec 2<&-                               # close stderr file descriptor
 exec 1<>LOG_FILE                        # open stdout as LOG_FILE file for r/w
 exec 2>&1                               # redirect stderr to stdout
 echo "this goes to LOG_FILE, not screen # (after above 4 exec commands)
-$#                                      # argc in bash
 [ $# -lt 1 ] && exit 1                  # check # args and quit
 $@                                      # argv in bash
 $0                                      # argv[0] in bash
+$#                                      # argc in bash (number of arguments)
+$$                                      # process ID of current shell
 set -o verbose                          # echo commands to stdout
 cd $(dirname "$BASH_SOURCE") && pwd -P  # absolute path of sourced script
 eval                                    # run in current shell
@@ -822,6 +815,7 @@ IFS=$'\n' for i in $(cat file); do      # for loop, line-by-line
 hash CMD                                # return true if CMD is in PATH
 echo {1..10}                            # expands to 1 2 3 ... 10 (see also seq)
 printf 'a%.0s' {1..10}                  # Repeat letter 'a' 10 times
+if [[ $foo = "bar" ]]; then             # Use double brackets in case $foo is empty
 
 # Bash shell productivity
 cp file{,.bak}                          # Backup a file
@@ -840,11 +834,17 @@ echo !$:e                               # Remove all but the suffix
 [Ctrl + p]                              # Prev history command
 [Ctrl + n]                              # Next history command
 [Alt + .]                               # Last word on prev history command
+[Alt + b]                               # Move cursor left one word
+[Alt + f]                               # Move cursor right one word
+[Ctrl + b]                              # Move cursor left one character
+[Ctrl + f]                              # Move cursor right one character
 [Ctrl + l]                              # Clear screen
 [Ctrl + s]                              # Stop output to the screen
 [Ctrl + q]                              # Restart output to the screen
 [Ctrl + c]                              # Terminate command
 [Ctrl + z]                              # Suspend command
+[Ctrl + u]                              # Cut text to left of cursor
+[Ctrl + y]                              # Paste text
 fg                                      # Restart command in foreground
 bg                                      # Restart command in background
 
@@ -1143,6 +1143,13 @@ diff ... | colordiff                    # colorize diff output
 wdiff ... | colordiff                   # colorize wdiff output
 diff --brief -r DIR1 DIR2               # compare directories recursively
 python2 -c "a=open('FILE1').read(); b=open('FILE2').read(); import sys; sys.exit(not a in b)"  # FILE1 is contained by FILE2
+diff `old` `new` | less		            # diff the output of two commands and send to less
+space to jump page at a time, enter to jump line at a time
+arrow to left says old hs what new doesn't
+arrow to right says new has what old doesn't
+line numbers before arrows: a -> add, d -> delete, c -> change
+diff -y `old` `new` | less		        #does side by side
+diff -w 200 -y `old` `new` | less	    #does side by side with line width of 200
 
 # Shell math
 expr 1 / 2                              # integer only
