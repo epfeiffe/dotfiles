@@ -2700,60 +2700,17 @@ c$			# deletes rest of line and puts you in insert mode
 
 
 ######################################
-vscode without vim
-
-# toggle files in viewing directory
-Ctrl + Tab
-
-# copy line up or down
-Ctrl + Alt + P/N
-
-# add multiple cursors to selected lines
-Shift + Alt + I
-
-# toggle file or debug windows
-Ctrl + Shift + E/D
-
-Ctrl + L            # select line
-Ctrl + B            # toggle filebar
-Ctrl + J            # toggle terminal
-Alt + Enter         # enter fullscreen mode
-Ctrl + K + S        # access keyboard bindings
-
-
-
-######################################
 vscode with vim
-
-# Close a tab
-Ctrl + W
-
-# Close a window
-Ctrl + Alt + W
-
-# Select files to cycle through with arrow keys
-Ctrl + Shift + E
-
-# Open terminal
-Ctrl + `
-
-# Open command pallate
-Ctrl + Shift + P
-
-# Open settings
-Ctrl + ,
-
-# Cycle through tabs
-Ctrl + Tab
-Ctrl + Shift + Tab
-
-# Open file as a split window, hover over and press
-Ctrl + Enter
-
-# Switch between split windows
-Ctrl + 1
-Ctrl + 2
-etc.
+Ctrl + W                                # Close a tab
+Ctrl + Alt + W                          # Close a window
+Ctrl + Shift + E                        # Select files to cycle through with arrow keys
+Ctrl + `                                # Open terminal
+Ctrl + Shift + P                        # Open command pallate
+Ctrl + ,                                # Open settings
+Ctrl + Tab                              # Cycle through tabs
+Ctrl + Enter                            # Open file as a split window, hover over and press
+Ctrl + #                                # Switch between split windows
+Alt + Z                                 # toggle wordwrap 
 
 
 ######################################
