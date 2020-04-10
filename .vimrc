@@ -1,4 +1,5 @@
 set number 
+syntax on
 "colorscheme elflord
 hi Visual cterm=NONE ctermbg=103 ctermfg=NONE guibg=Grey40
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
