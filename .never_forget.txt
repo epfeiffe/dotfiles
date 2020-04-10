@@ -783,10 +783,14 @@ exec 1<>LOG_FILE                        # open stdout as LOG_FILE file for r/w
 exec 2>&1                               # redirect stderr to stdout
 echo "this goes to LOG_FILE, not screen # (after above 4 exec commands)
 [ $# -lt 1 ] && exit 1                  # check # args and quit
-$@                                      # argv in bash
-$0                                      # argv[0] in bash
+$0                                      # argv[0] in bash (name of script)
+$1 - $9                                 # arguments to script, $1 is first and so on
+$@                                      # argv in bash (all the arguments)
 $#                                      # argc in bash (number of arguments)
-$$                                      # process ID of current shell
+$?                                      # return code of previous command
+$$                                      # process ID of current script
+!!                                      # entire last command (useful if permission denied, run sudo !!)
+$_                                      # last argument from last command
 set -o verbose                          # echo commands to stdout
 cd $(dirname "$BASH_SOURCE") && pwd -P  # absolute path of sourced script
 eval                                    # run in current shell
@@ -816,6 +820,8 @@ hash CMD                                # return true if CMD is in PATH
 echo {1..10}                            # expands to 1 2 3 ... 10 (see also seq)
 printf 'a%.0s' {1..10}                  # Repeat letter 'a' 10 times
 if [[ $foo = "bar" ]]; then             # Use double brackets in case $foo is empty
+man test                                # run to see different equality tests for if statements
+apt-get install shellcheck              # useful tool to help check script syntax: https://github.com/koalaman/shellcheck
 
 # Bash shell productivity
 cp file{,.bak}                          # Backup a file
