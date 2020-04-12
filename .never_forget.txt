@@ -2633,22 +2633,18 @@ sudo apt-get install curl httpie             # add httpie, a pretty formatter fo
 
 #####################################
 vim #201
-gg                 # jump to top of file
-G                  # jump to bottom of file
-Shift + v          # select line
-j or k             # Go up or down a line
-dd                 # delete a line
-o                  # insert line below
-Shift + o          # insert line above
-u                  # undo
-
-Toggle case when selected
-~
-U   # uppercase
-u   # lowercase
-
-auto add tabs to entire file
-gg=G
+gg                                      # jump to top of file
+G                                       # jump to bottom of file
+Shift + v                               # select line
+j or k                                  # Go up or down a line
+dd                                      # delete a line
+o                                       # insert line below
+Shift + o                               # insert line above
+u                                       # undo
+~                                       # toggle selected text case
+U                                       # switch selected text to uppercase
+u                                       # switch selected text to lowercase
+gg=G                                    # auto add tabs to entire file
 
 select line of code
 Shift + v
@@ -2656,44 +2652,44 @@ Shift + v (j/k select lines of code)
 Ctrl + v (j/k select lines of code) Shift + I (edit multiple lines at once)
 
 split window commands #201
-:e <filename>		# edit another file
-:split <filename>       # split windows with <filename>
-Ctrl + w + w		# toggle split windows
-Ctrl + w + _		# maximize current window
-Ctrl + w + =		# make all windows equal size
-:vsplit <filename>	# vertical split
-:hide			# close current window
-:only			# closes all windows except this one
-:ls			# show current buffers???
+:e <filename>		                    # edit another file
+:split <filename>                       # split windows with <filename>
+Ctrl + w + w		                    # toggle split windows
+Ctrl + w + _		                    # maximize current window
+Ctrl + w + =		                    # make all windows equal size
+:vsplit <filename>	                    # vertical split
+:hide		    	                    # close current window
+:only		    	                    # closes all windows except this one
+:ls			                            # show current buffers???
 
-:#,#s/old/new/g		# replace old with new between line numbers
-:%s/foo/bar/g		# replace all occurrences of foo with bar
-:%s/old/new/gc		# replace old with new with a prompt first
-
-# run unix command in vim
-:!<command name>	# ex: :!ls
+:#,#s/old/new/g		                    # replace old with new between line numbers
+:%s/foo/bar/g		                    # replace all occurrences of foo with bar
+:%s/old/new/gc		                    # replace old with new with a prompt first
+:!<command name>	                    # run unix command in vim, ex: :!ls
 
 deletes and movement
-$			# move to end of line
-0			# move to start of line
-dw de d$	# deletes word inclusive and exclusive character, delete end of line
-d2w			# deletes next two words (# of words can be changed)
-dd			# delete entire line
-2dd			# delete next 2 lines
-w			# jump forward to front of word
-e			# jump forward to end of word
-b			# jump back to front of word
-a			# enter insert mode on next character
-
-replace
-r*			# replace current character with *
-R			# enter constant replace mode(like insert mode but deletes character too)
-ce			# deletes the rest of current word and puts in insert mode
-c$			# deletes rest of line and puts you in insert mode
-
-:e .			# opens file viewer
-
-:hi             # shows color palette and assigned variables
+$			                            # move to end of line
+0			                            # move to start of line
+dw de d$	                            # deletes word inclusive and exclusive character, delete end of line
+d2w			                            # deletes next two words (# of words can be changed)
+dd			                            # delete entire line
+2dd			                            # delete next 2 lines
+w			                            # jump forward to front of word
+e			                            # jump forward to end of word
+b			                            # jump back to front of word
+a			                            # enter insert mode on next character
+Ctrl + E                                # scroll down by line
+Ctrl + D                                # scroll down by half page
+Ctrl + F                                # scroll down by page
+Ctrl + Y                                # scroll up by line
+Ctrl + U                                # scroll up by half page
+Ctrl + B                                # scroll up by page
+r*			                            # replace current character with *
+R			                            # enter constant replace mode(like insert mode but deletes character too)
+ce			                            # deletes the rest of current word and puts in insert mode
+c$			                            # deletes rest of line and puts you in insert mode
+:e .			                        # opens file viewer
+:hi                                     # shows color palette and assigned variables
 
 % Easter egg for those who look, here is mine (in vim):
     % yypws^M^[i{"first": ^[A,^[kddpkJli"last": ^[A}^[0f:lli"^[wwi"^[f:lli"^[$i"^[kJ0j
@@ -2726,13 +2722,3 @@ html
 # online tester
 www.regexr.com
 
-
-######################################
-### File Redirects #201
-
-<			# send file as input
->			# send file as output
-<<			# "Here Document"
->>			# append output to file
-<& / >&			# merge input / output
-history			# shows history of commands executed
