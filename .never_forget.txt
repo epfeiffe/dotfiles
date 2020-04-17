@@ -835,6 +835,8 @@ echo !$:h                               # Directory part of prev cmd last item
 echo !$:t                               # File part of prev cmd last item
 echo !$:r                               # ^^^ w/o suffix
 echo !$:e                               # Remove all but the suffix
+history                                 # Show all command history
+history | grep CMD                      # Search command history for CMD
 [Ctrl + r]                              # Search history
 [Ctrl + g]                              # Cancel search history
 [Ctrl + p]                              # Prev history command
