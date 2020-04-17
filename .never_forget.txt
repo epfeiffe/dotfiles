@@ -2724,3 +2724,8 @@ html
 # online tester
 www.regexr.com
 
+
+# Windows OS Shortcuts
+WINDOW + m                              # minimize all open applications
+Alt + Space + n                         # minimize current window
+Alt + Space + x                         # maximize current window
