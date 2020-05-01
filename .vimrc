@@ -6,10 +6,10 @@ set number
 """match OverLength /\%81v.\+/
 """set spell
 "hi SpellBad ctermbg=160
-"set tabstop=4
-"set shiftwidth=4
-"set expandtab
-"set hlsearch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set hlsearch
 "noremap <F4> :set hlsearch!
 "highlight Search ctermbg=242
 "hi Type ctermfg=12
