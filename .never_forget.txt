@@ -2671,21 +2671,28 @@ Ctrl + w + =		                    # make all windows equal size
 
 deletes and movement
 $			                            # move to end of line
+^                                       # move to first non blank character 
 0			                            # move to start of line
 dw de d$	                            # deletes word inclusive and exclusive character, delete end of line
 d2w			                            # deletes next two words (# of words can be changed)
 dd			                            # delete entire line
 2dd			                            # delete next 2 lines
+da                                      # delete contents of ', (, [, or { including character(must specify one of the four)
+ci                                      # same as da but only deletes contents and enters insert mode
 w			                            # jump forward to front of word
 e			                            # jump forward to end of word
 b			                            # jump back to front of word
 a			                            # enter insert mode on next character
-Ctrl + E                                # scroll down by line
-Ctrl + D                                # scroll down by half page
-Ctrl + F                                # scroll down by page
-Ctrl + Y                                # scroll up by line
-Ctrl + U                                # scroll up by half page
-Ctrl + B                                # scroll up by page
+Ctrl + e                                # scroll down by line
+Ctrl + d                                # scroll down by half page
+Ctrl + f                                # scroll down by page
+Ctrl + y                                # scroll up by line
+Ctrl + u                                # scroll up by half page
+Ctrl + b                                # scroll up by page
+H                                       # move to top of page
+M                                       # move to middle of page
+L                                       # move to bottom of page
+fa                                      # find character a on current line(use , and ; to navigate matches)
 r*			                            # replace current character with *
 R			                            # enter constant replace mode(like insert mode but deletes character too)
 ce			                            # deletes the rest of current word and puts in insert mode
