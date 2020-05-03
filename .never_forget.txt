@@ -2311,6 +2311,9 @@ git init DIR                                          # no server
 git remote add origin git@github.com:ORGANIZATION/PROJECT.git
 git push -u origin master
 
+# Deal with the error of failing to merge unrelated histories(try to avoid this)
+git pull origin master --allow-unrelated-histories
+
 # Basic workflow
 git pull                                # update local copy
 $EDITOR FILE                            # work on stuff, modify files
