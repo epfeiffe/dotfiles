@@ -908,6 +908,17 @@ tac | sed -n '1,/PATTERN/p' | tac       # print from last match to end of file
 sed '/PATTERN1/s/PATTERN2/PATTERN3/'    # match P1, then apply query-replace
 perl -0pe 's/QUERY/REPLACE/sm'          # multiline regex query-replace
 
+# regex
+.                                       # any single character
+*                                       # zero or more of the preceding match
++                                       # one or more of the preceding match
+[abc]                                   # any one character of a, b, or c
+(RX1|RX2)                               # either something that matches RX1 or RX2
+^                                       # the start of a line
+$                                       # the end of a line
+www.regexr.com                          # online tester
+https://regex101.com/r/qqbZqh/2         # online tester
+
 # awk
 awk '/Iowa/,/Montana/'                  # print lines between Iowa & Montana
 awk '{print $NF}'                       # print last field
@@ -2728,14 +2739,10 @@ html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
 
-######################################
-### Regex #201
-
-# online tester
-www.regexr.com
 
 
 # Windows OS Shortcuts
 WINDOW + m                              # minimize all open applications
+WINDOW + e                              # open file explorer
 Alt + Space + n                         # minimize current window
 Alt + Space + x                         # maximize current window
