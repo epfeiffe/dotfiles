@@ -1308,7 +1308,8 @@ gpg --verify FILE.exe.sig               # Verify signed FILE.exe
 dmesg | grep /dev/tty                   # recently connected devices
 screen /dev/ttyACM0 9600                # text input/output at 9600 Baud
                                         #   Ctrl-A,Shift-K to quit
-# Virtual terminals
+
+# Virtual terminals: http://linuxcommand.org/lc3_adv_termmux.php
 screen                     # start virtual terminal
 screen -S NAME             # start virtual terminal named NAME
 screen -r NAME             # attach to NAME
