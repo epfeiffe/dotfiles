@@ -103,8 +103,29 @@ set scrolloff=5
 " colorscheme elflord
 set background=dark
 
+" ------------
 " ---Pugins---
+" ------------
+
+" ---NERDTree---
 " NERDTree is a file directory explorer, found here:
 " https://github.com/preservim/nerdtree
+" NOTE: For NERDTree commands below to work, you must install
+" it with the following commands:
+"   git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+"   vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+" Some linux systems need this command to auto open NERDTree
+set rtp+=~/.vim/pack/vendor/start/nerdtree
+
 " Auto open NERDTree on start
 autocmd vimenter * NERDTree
+
+" Move the cursor to working file on startup
+autocmd vimenter * wincmd p
+
+" NOTE: The following command opens NERDTree and moves the cursor in one line
+" autocmd vimenter * NERDTree | wincmd p
+
+" Auto close the NERDTree if it is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
