@@ -2649,7 +2649,7 @@ sudo apt-get install sqlite3 curl httpie     # not python, add sqlite3
 sudo apt-get install curl httpie             # add httpie, a pretty formatter for curl
 
 #####################################
-vim #201
+### vim #201
 gg                                      # jump to top of file
 G                                       # jump to bottom of file
 Shift + v                               # select line
@@ -2663,12 +2663,12 @@ U                                       # switch selected text to uppercase
 u                                       # switch selected text to lowercase
 gg=G                                    # auto add tabs to entire file
 
-select line of code
+# select line of code
 Shift + v
 Shift + v (j/k select lines of code)
 Ctrl + v (j/k select lines of code) Shift + I (edit multiple lines at once)
 
-split window commands #201
+# split window commands #201
 :e <filename>		                    # edit another file
 :split <filename>                       # split windows with <filename>
 Ctrl + w + w		                    # toggle split windows
@@ -2678,13 +2678,12 @@ Ctrl + w + =		                    # make all windows equal size
 :hide		    	                    # close current window
 :only		    	                    # closes all windows except this one
 :ls			                            # show current buffers???
-
 :#,#s/old/new/g		                    # replace old with new between line numbers
 :%s/foo/bar/g		                    # replace all occurrences of foo with bar
 :%s/old/new/gc		                    # replace old with new with a prompt first
 :!<command name>	                    # run unix command in vim, ex: :!ls
 
-deletes and movement
+# deletes and movement
 $			                            # move to end of line
 ^                                       # move to first non blank character 
 0			                            # move to start of line
@@ -2718,9 +2717,26 @@ c$			                            # deletes rest of line and puts you in insert m
 % Easter egg for those who look, here is mine (in vim):
     % yypws^M^[i{"first": ^[A,^[kddpkJli"last": ^[A}^[0f:lli"^[wwi"^[f:lli"^[$i"^[kJ0j
 
+### vim plugins
+# syntastic https://vimawesome.com/plugin/syntastic
+:help syntastic                         # syntastic help manual
+:help syntastic-checkers                # shows list of all checkers for all languages
+:SyntasticInfo                          # list currently enabled and available checkers
+# add to vimrc to edit checkers
+let g:syntastic_<filetype>_checkers = ['<checker-name>']
+# ex:
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
+# NERDTree https://github.com/preservim/nerdtree
+:NERDTree                               # actiavtes NERDTree explorer
+i                                       # opens file in split window
+I                                       # shows hidden files
+?                                       # displays commands
+
 
 ######################################
-vscode with vim
+### vscode with vim
 Ctrl + W                                # Close a tab
 Ctrl + Alt + W                          # Close a window
 Ctrl + Shift + E                        # Select files to cycle through with arrow keys
@@ -2734,7 +2750,7 @@ Alt + Z                                 # toggle wordwrap
 
 
 ######################################
-html
+### html
 
 # bootstrap source:
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />

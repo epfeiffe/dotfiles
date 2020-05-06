@@ -107,13 +107,24 @@ set background=dark
 " ---Pugins---
 " ------------
 
+
+" ---Pathogen---
+" Package manager for vim plugins such as Syntastic.
+" NOTE: For the Pathogen command below to work, you must install
+" it with the following commands:
+"   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+"   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+execute pathogen#infect()
+
+
 " ---NERDTree---
 " NERDTree is a file directory explorer, found here:
 " https://github.com/preservim/nerdtree
-" NOTE: For NERDTree commands below to work, you must install
+" NOTE: For the NERDTree commands below to work, you must install
 " it with the following commands:
 "   git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 "   vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
 " Some linux systems need this command to auto open NERDTree
 set rtp+=~/.vim/pack/vendor/start/nerdtree
 
@@ -129,3 +140,29 @@ autocmd vimenter * wincmd p
 " Auto close the NERDTree if it is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+
+" ---Syntastic---
+" Syntastic is a syntax checker, found here:
+" https://vimawesome.com/plugin/syntastic
+" NOTE: For the Syntastic commands below to work, you must install
+" it with the following commands:
+"   cd ~/.vim/bundle && \
+"   git clone --depth=1 https://github.com/vim-syntastic/syntastic.git 
+" Quit vim and start it back up, then type:
+"   :Helptags
+
+" Sets statuslines to show in a window at the bottom of the screen
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Always populate and automatically activate local list
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+" Check file syntax when open but avoid when closed
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Sets python specific checkers
+let g:syntastic_python_checkers = ['pylint', 'pep8']
