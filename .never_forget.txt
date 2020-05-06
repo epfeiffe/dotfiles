@@ -2718,21 +2718,25 @@ c$			                            # deletes rest of line and puts you in insert m
     % yypws^M^[i{"first": ^[A,^[kddpkJli"last": ^[A}^[0f:lli"^[wwi"^[f:lli"^[$i"^[kJ0j
 
 ### vim plugins
-# syntastic https://vimawesome.com/plugin/syntastic
-:help syntastic                         # syntastic help manual
-:help syntastic-checkers                # shows list of all checkers for all languages
-:SyntasticInfo                          # list currently enabled and available checkers
-# add to vimrc to edit checkers
-let g:syntastic_<filetype>_checkers = ['<checker-name>']
-# ex:
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-
 # NERDTree https://github.com/preservim/nerdtree
 :NERDTree                               # actiavtes NERDTree explorer
 i                                       # opens file in split window
 I                                       # shows hidden files
 ?                                       # displays commands
+
+# syntastic https://vimawesome.com/plugin/syntastic
+:help syntastic                         # syntastic help manual
+:help syntastic-checkers                # shows list of all checkers for all languages
+:SyntasticInfo                          # list currently enabled and available checkers
+:SyntasticCheck                         # manually check errors
+:Errors                                 # show location-list window(error list)
+:lclose                                 # hide location-list window(error list)
+:SyntasticReset                         # clear error list
+# add to vimrc to edit checkers
+let g:syntastic_<filetype>_checkers = ['<checker-name>']
+# ex:
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 
 
 ######################################
