@@ -2714,6 +2714,18 @@ c$			                            # deletes rest of line and puts you in insert m
 :e .			                        # opens file viewer
 :hi                                     # shows color palette and assigned variables
 
+# tag jumping
+Ctrl + ]                                # jump to tag under cursor
+g + Ctrl + ]                            # jump for ambiguous tags
+Ctrl + t                                # jump back up the tag stack
+
+# autocomplete
+Ctrl + n                                # list autocompletions for everything
+Ctrl + x + Ctrl + n                     # list autocompletions for current file
+Ctrl + x + Ctrl + f                     # list autocompletions for filenames
+Ctrl + x + Ctrl + ]                     # list autocompletions for tags
+Ctrl + n / Ctrl + p                     # cycle forward and backward through autocompletion list
+
 % Easter egg for those who look, here is mine (in vim):
     % yypws^M^[i{"first": ^[A,^[kddpkJli"last": ^[A}^[0f:lli"^[wwi"^[f:lli"^[$i"^[kJ0j
 
