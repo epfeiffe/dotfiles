@@ -2713,6 +2713,10 @@ ce			                            # deletes the rest of current word and puts in 
 c$			                            # deletes rest of line and puts you in insert mode
 :e .			                        # opens file viewer
 :hi                                     # shows color palette and assigned variables
+mX                                      # mark a spot to move to
+'X                                      # move to a marked spot
+Ctrl + o                                # move back to frequently visited location
+Ctrl + i                                # move forward to frequently visited location
 
 # tag jumping
 Ctrl + ]                                # jump to tag under cursor
