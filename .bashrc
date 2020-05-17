@@ -141,7 +141,7 @@ export EDITOR='vim'
 export VISUAK='vim'
 
 parse_git_branch() { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' ; }
-export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[00m\]$ "
+export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[00m\]$ "
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export DISPLAY=:0
