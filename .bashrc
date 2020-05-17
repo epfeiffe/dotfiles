@@ -141,8 +141,39 @@ export EDITOR='vim'
 export VISUAK='vim'
 
 parse_git_branch() { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' ; }
-# parse_git_status() { git status 2> /dev/null | }
-export PS1="\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[00m\]$ "
+git_unstaged() { 
+    UNSTAGED=$(git ls-files -m 2> /dev/null | wc -l)
+    UNTRACKED=$(git ls-files --others --exclude-standard 2> /dev/null | wc -l)
+    if [[ $UNSTAGED -ne 0 && $UNTRACKED -ne 0 ]] 
+    then
+        UNSTAGED=$((UNSTAGED + UNTRACKED))
+        echo "$UNSTAGED"
+    elif [[ $UNSTAGED -ne 0 ]]
+    then
+        echo "$UNSTAGED"
+    elif [[ $UNTRACKED -ne 0 ]]
+    then
+        echo "$UNTRACKED"
+    fi
+} 
+    
+git_staged() {
+    STAGED=$(git diff --name-only --cached 2> /dev/null | wc -l)
+    if [[ $STAGED -ne 0 ]] 
+    then
+        echo "$STAGED"
+    fi
+}
+    
+git_ahead() {
+    PUSH=$(git status 2> /dev/null | grep 'Your branch is ahead of' | grep -Eo '[0-9]')
+    if [[ ! -z "$PUSH" ]] 
+    then
+        echo "$PUSH"
+    fi
+}
+
+export PS1="\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[31m\]\$(git_unstaged)\[\033[32m\]\$(git_staged)\[\033[34m\]\$(git_ahead)\[\033[00m\]$ "
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export DISPLAY=:0
