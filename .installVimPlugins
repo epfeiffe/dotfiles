@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Stop on errors, print commands
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+set -x
+
+
+# NOTE: See .vimrc script to see what commands use these plugins/package managers
+# and additional details.
+# Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# NerdTree
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
+# Syntastic
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git 
