@@ -2723,6 +2723,13 @@ Ctrl + ]                                # jump to tag under cursor
 g + Ctrl + ]                            # jump for ambiguous tags
 Ctrl + t                                # jump back up the tag stack
 
+# tab commands
+:tabe <filename>                        # open a new filename in a seperate tab
+gt                                      # cycle forward through tabs
+gT                                      # cycle backward through tabs
+ngt                                     # jump to tag n, where n is an integer between 1-9
+:wqa                                    # save and quit all tabs
+
 # autocomplete
 Ctrl + n                                # list autocompletions for everything
 Ctrl + x + Ctrl + n                     # list autocompletions for current file
