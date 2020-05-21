@@ -131,6 +131,7 @@ set wildmenu
 " -----------------
 " Create the `tags` file (may need to install ctags first)
 command! MakeTags !ctags -R .
+command! RemoveTags !rm tags
 
 " NOW WE CAN:
 " - Use ^] to jump to tag under cursor
