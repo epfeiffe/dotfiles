@@ -21,6 +21,7 @@ cd ~/.vim/bundle && \
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git 
 
 # Rainbow Parentheses
+cd ~/.vim
 git clone https://github.com/luochen1990/rainbow.git
 cd rainbow
 cp plugin/* ~/.vim/plugin
