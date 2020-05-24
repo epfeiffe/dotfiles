@@ -170,6 +170,10 @@ inoremap {<CR>  {<CR>}<Esc>O
 inoremap (<CR>  (<CR>)<Esc>O
 inoremap [<CR>  [<CR>]<Esc>O
 
+" Still allow for manual completions
+inoremap {}     {}
+inoremap ()     ()
+inoremap []     []
 
 " ------------
 " ---Pugins---
