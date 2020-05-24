@@ -156,6 +156,20 @@ command! RemoveTags !rm tags
 " NOW WE CAN:
 " - Use ^n and ^p to go back and forth in the suggestion list
 
+" Sets auto indenting when starting new lines
+set autoindent
+
+" Maps completions to add closing character
+inoremap {      {}<Left>
+inoremap (      ()<Left>
+inoremap [      []<Left>
+
+" Maps completions to add closing character with correct newline
+" spacing when the enter button <CR> is pressed shortly after
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap [<CR>  [<CR>]<Esc>O
+
 
 " ------------
 " ---Pugins---
