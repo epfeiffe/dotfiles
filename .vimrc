@@ -219,3 +219,6 @@ let g:syntastic_check_on_wq = 0
 
 " Sets python specific checkers
 let g:syntastic_python_checkers = ['pylint', 'pep8']
+
+" Sets go specific checkers
+let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
