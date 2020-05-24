@@ -1326,6 +1326,12 @@ tmux kill-session -t NAME  # kill session NAME
 [tmux] C-b 0               # select window 0
 [tmux] C-b n               # next window
 [tmux] C-b p               # previous window
+[tmux] C-b %               # split pane vertically
+[tmux] C-b "               # split pane horizontally
+[tmux] C-b o               # switch panes
+[tmux] C-b spacebar        # toggle pane layouts
+[tmux] C-b !               # convert pane to window
+[tmux] C-b x               # close current pane
 
 # Shared virtual terminal
 alice@alicehost> ssh SERVER
