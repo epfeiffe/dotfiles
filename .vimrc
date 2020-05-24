@@ -240,3 +240,19 @@ let g:syntastic_python_checkers = ['pylint', 'pep8']
 
 " Sets go specific checkers
 let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
+
+
+" ---Rainbow Parentheses---
+" Adds color pairs to the following:
+" {} () []
+" to make code more readable, found here:
+" https://github.com/luochen1990/rainbow
+" NOTE: For Rainbow Patentheses to work you must install
+" it with the following commands:
+" git clone https://github.com/luochen1990/rainbow.git
+" cd rainbow
+" cp plugin/* ~/.vim/plugin
+" cp autoload/* ~/.vim/autoload
+
+" Enables Rainbow Parentheses
+let g:rainbow_active = 1
