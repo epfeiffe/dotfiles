@@ -1698,8 +1698,10 @@ g++ -g                                  # compile, need -g flag!
 gdb ./a.out                             # run
 gdb -tui FILE.o                         # run, "CLI-based" GUI
 gdb -q FILE.o                           # run quiet mode
+gdb --args FILE.o arg1 arg2             # run with arguments
 # Commands
 (gdb) run                               # begin running program
+(gdb) run params ...                    # begin running program with parameters
 (gdb) k                                 # kill the program being run
 (gdb) b #                               # set a break point at line #
 (gdb) d #                               # delete a break point at line #
