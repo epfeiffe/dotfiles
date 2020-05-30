@@ -3,6 +3,7 @@
 .cache/
 .config/
 .gnupg/
+.gitconfig
 .httpie/
 .john/
 .lesshst
