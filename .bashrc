@@ -80,6 +80,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias la='ls -a'
     alias ll='ls -al'
+
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -90,6 +91,10 @@ else
     alias ls='ls -FHG'
     alias la='ls -a'
     alias ll='ls -al'
+
+    alias grep='grep --color'
+    alias fgrep='fgrep --color'
+    alias egrep='egrep --color'
 fi
 
 # colored GCC warnings and errors
