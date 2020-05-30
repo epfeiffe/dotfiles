@@ -103,7 +103,7 @@ fi
 alias src='cd /mnt/c/Users/emers/src'
 alias vdir='ls -hF --color=tty --format=long'
 alias open='explorer.exe .'
-alias reload='source ~/.bashrc'
+alias reload='source ~/.bash_profile'
 alias forgot='vim ~/.never_forget.txt'
 cdls() { cd "$@" && ls; }
 alias weather='curl -X GET http://wttr.in/'
