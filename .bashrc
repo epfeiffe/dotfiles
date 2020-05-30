@@ -167,7 +167,7 @@ git_staged() {
     
 git_ahead() {
     PUSH=$(git status 2> /dev/null | grep 'Your branch is ahead of' | grep -Eo '[0-9]')
-    if [[ ! -z "$PUSH" ]] 
+    if [[ -z "$PUSH" ]] 
     then
         echo "$PUSH"
     fi
