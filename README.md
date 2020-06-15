@@ -6,7 +6,7 @@ Installation
 ```
 git clone https://github.com/epfeiffe/dotfiles.git
 rsync -av dotfiles/ ~/
-rm -rf dotfiles/ .git/
+rm -rf dotfiles/ .git/ .gitignore README.md
 ```
 To install vim plugins:
 ```
