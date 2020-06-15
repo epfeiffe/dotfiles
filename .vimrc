@@ -175,6 +175,10 @@ inoremap {}     {}
 inoremap ()     ()
 inoremap []     []
 
+" Toggle paste mode with F2 to ignore vim formatting when pasting
+" from clipboard.
+set pastetoggle=<F2>
+
 " ------------
 " ---Pugins---
 " ------------
