@@ -2643,7 +2643,7 @@ g_ether
 
 
 ######################################
-python commands #485
+python commands
 
 python3 -m venv env                          # new virtual environment
 source env/bin/activate                      # activate VE
@@ -2660,7 +2660,7 @@ sudo apt-get install sqlite3 curl httpie     # not python, add sqlite3
 sudo apt-get install curl httpie             # add httpie, a pretty formatter for curl
 
 #####################################
-### vim #201
+### vim text editor
 gg                                      # jump to top of file
 G                                       # jump to bottom of file
 Shift + v                               # select line
@@ -2801,3 +2801,10 @@ WINDOW + m                              # minimize all open applications
 WINDOW + e                              # open file explorer
 Alt + Space + n                         # minimize current window
 Alt + Space + x                         # maximize current window
+Alt + F4                                # close current application
+WINDOW + l                              # lock the screen
+Ctrl + Alt + Delete                     # access the task manager
+Alt + Tab                               # switch between open applications and tabs
+
+
+
