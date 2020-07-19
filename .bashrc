@@ -178,7 +178,12 @@ git_ahead() {
     fi
 }
 
-export PS1="\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[31m\]\$(git_unstaged)\[\033[32m\]\$(git_staged)\[\033[34m\]\$(git_ahead)\[\033[00m\]$ "
+export PS1="\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[00m\]$ "
+
+# communt the above PS1 and uncomment the following PS1 for some git status 
+# updates on the terminal prompt, note: for large repositories, this will
+# case massive load times
+# export PS1="\[\033[01;34m\]\W\[\033[30m\]\$(parse_git_branch)\[\033[31m\]\$(git_unstaged)\[\033[32m\]\$(git_staged)\[\033[34m\]\$(git_ahead)\[\033[00m\]$ "
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export DISPLAY=:0
