@@ -2797,6 +2797,7 @@ Alt + Z                                 # toggle wordwrap
 
 
 # Windows OS Shortcuts
+WINDOW + .                              # open emoji keyboard
 WINDOW + m                              # minimize all open applications
 WINDOW + e                              # open file explorer
 WINDOW + l                              # lock the screen
@@ -2817,7 +2818,6 @@ Home                                    # scroll to top of page on browser
 End                                     # scroll to bottom of page on browser
 PgUp                                    # scroll up on browser
 PgDn                                    # scroll down on browser
-
 
 
 
