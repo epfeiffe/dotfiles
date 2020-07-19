@@ -2643,7 +2643,7 @@ g_ether
 
 
 ######################################
-python commands #485
+python commands
 
 python3 -m venv env                          # new virtual environment
 source env/bin/activate                      # activate VE
@@ -2660,7 +2660,7 @@ sudo apt-get install sqlite3 curl httpie     # not python, add sqlite3
 sudo apt-get install curl httpie             # add httpie, a pretty formatter for curl
 
 #####################################
-### vim #201
+### vim text editor
 gg                                      # jump to top of file
 G                                       # jump to bottom of file
 Shift + v                               # select line
@@ -2799,5 +2799,25 @@ Alt + Z                                 # toggle wordwrap
 # Windows OS Shortcuts
 WINDOW + m                              # minimize all open applications
 WINDOW + e                              # open file explorer
+WINDOW + l                              # lock the screen
+WINDOW + UpArrow                        # maximize the application
+WINDOW + DownArrow                      # minimize the application
+WINDOW + LeftArrow                      # split application to left of screen
+WINDOW + RightArrow                     # split application to right of screen
+WINDOW + Shift + s                      # open screenshot tools
 Alt + Space + n                         # minimize current window
 Alt + Space + x                         # maximize current window
+Alt + F4                                # close current application
+Ctrl + Alt + Delete                     # access the task manager
+Alt + Tab                               # switch between open applications and tabs
+Shift + Spacebar                        # scroll up on browser
+Spacebar                                # scroll down on browser
+# Note: Activating these next 4 keys may require pressing Fn first
+Home                                    # scroll to top of page on browser
+End                                     # scroll to bottom of page on browser
+PgUp                                    # scroll up on browser
+PgDn                                    # scroll down on browser
+
+
+
+
