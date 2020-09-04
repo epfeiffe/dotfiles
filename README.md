@@ -8,6 +8,10 @@ git clone https://github.com/epfeiffe/dotfiles.git
 rsync -av dotfiles/ ~/
 rm -rf dotfiles/ .git/ .gitignore README.md
 ```
+You may need to reload your terminal before installing plugins:
+```
+source ~/.bash_profile
+```
 To install vim plugins:
 ```
 chmod +x .installVimPlugins
