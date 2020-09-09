@@ -107,8 +107,8 @@ alias reload='source ~/.bash_profile'
 alias forgot='vim ~/.never_forget.txt'
 cdls() { cd "$@" && ls; }
 alias weather='curl -X GET http://wttr.in/'
-alias git3='git add . && git ci && git push'
-alias git2='git add . && git ci'
+alias git3='git add -A && git ci && git push'
+alias git2='git add -A && git ci'
 
 # python aliases
 alias activate='source env/bin/activate'
