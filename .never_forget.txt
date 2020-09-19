@@ -1168,7 +1168,7 @@ arrow to left says old hs what new doesn't
 arrow to right says new has what old doesn't
 line numbers before arrows: a -> add, d -> delete, c -> change
 diff -y `old` `new` | less		        #does side by side
-diff -w 200 -y `old` `new` | less	    #does side by side with line width of 200
+diff -W 200 -y `old` `new` | less	    #does side by side with line width of 200
 
 # Shell math
 expr 1 / 2                              # integer only
