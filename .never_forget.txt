@@ -775,7 +775,7 @@ CMD1 &| CMD2                            # stdout + stderr -> pipe
 cat > FILE << EOF ... EOF               # ^^^ for writing a file
 <<< "STRING"                            # here string
 <( CMD )                                # create a temporary named pipe
-
+${VAR:N:M}                              # remove first N and last M characters of variable
 exec > >(tee logfile.txt); exec 2>&1;   # copy stdout and stderr to log file
 exec 1<&-                               # close stdout file descriptor
 exec 2<&-                               # close stderr file descriptor
@@ -1707,8 +1707,9 @@ gdb --args FILE.o arg1 arg2             # run with arguments
 (gdb) run params ...                    # begin running program with parameters
 (gdb) k                                 # kill the program being run
 (gdb) b #                               # set a break point at line #
-(gdb) d #                               # delete a break point at line #
+(gdb) d #                               # delete break point number #
 (gdb) i b                               # info on all breakpoints
+(gdb) b FILE:#                          # set a break point at line # in file FILE
 (gdb) c                                 # continue
 (gdb) s                                 # step
 (gdb) n                                 # next
@@ -2806,6 +2807,8 @@ WINDOW + DownArrow                      # minimize the application
 WINDOW + LeftArrow                      # split application to left of screen
 WINDOW + RightArrow                     # split application to right of screen
 WINDOW + Shift + s                      # open screenshot tools
+WINDOW + Shift + LeftArrow              # move application to monitor on the left
+WINDOW + Shift + RightArrow             # move application to monitor on the right
 Alt + Space + n                         # minimize current window
 Alt + Space + x                         # maximize current window
 Alt + F4                                # close current application
