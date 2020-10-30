@@ -98,7 +98,6 @@ else
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 alias src='cd /mnt/c/Users/emers/src'
 alias vdir='ls -hF --color=tty --format=long'
@@ -109,6 +108,10 @@ cdls() { cd "$@" && ls; }
 alias weather='curl -X GET http://wttr.in/'
 alias git3='git add -A && git ci && git push'
 alias git2='git add -A && git ci'
+
+# When running gdb or python, run quietly to hide liscensing information
+alias gdb='gdb -q'
+alias python3='python3 -q'
 
 # python aliases
 alias activate='source env/bin/activate'
