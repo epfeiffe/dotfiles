@@ -84,17 +84,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep='grep -n --color=auto'
+    alias fgrep='fgrep -n --color=auto'
+    alias egrep='egrep -n --color=auto'
 else
     alias ls='ls -FHG'
     alias la='ls -a'
     alias ll='ls -al'
 
-    alias grep='grep --color'
-    alias fgrep='fgrep --color'
-    alias egrep='egrep --color'
+    alias grep='grep -n --color'
+    alias fgrep='fgrep -n --color'
+    alias egrep='egrep -n --color'
 fi
 
 # colored GCC warnings and errors
@@ -117,7 +117,7 @@ alias python3='python3 -q'
 alias activate='source env/bin/activate'
 
 # Minecraft Server aliases
-alias start='java -Xmx4096M -Xms4096M -jar server.jar nogui'
+alias start='java -Xmx4096M -Xms4096M -jar spigot.jar nogui'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
