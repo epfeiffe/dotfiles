@@ -143,6 +143,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #   fi
 # fi
 
+# Set file and directory colors
+LS_COLORS="ow=01;33" && export LS_COLORS #WSL dir colors
 
 # set defualt editor
 export EDITOR='vim'

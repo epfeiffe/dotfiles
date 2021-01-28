@@ -11,10 +11,12 @@
 .go/
 .httpie/
 .john/
+.landscape/
 .lesshst
 .local/
 .m2/
 .mono/
+.motd_shown
 .mume/
 .netrc
 .node-gyp/
