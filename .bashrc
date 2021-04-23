@@ -101,10 +101,8 @@ fi
 
 alias src='cd /mnt/c/Users/emers/src'
 alias vdir='ls -hF --color=tty --format=long'
-alias open='explorer.exe .'
 alias reload='source ~/.bash_profile'
 alias forgot='vim ~/.never_forget.txt'
-cdls() { cd "$@" && ls; }
 alias weather='curl -X GET http://wttr.in/'
 alias git3='git add -A && git ci && git push'
 alias git2='git add -A && git ci'
