@@ -2542,7 +2542,10 @@ git verify-commit HEAD                  # verify signed commit
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"       # generate new ssh key (hit enter)
 eval $(ssh-agent -s)                                        # start ssh-agent in background
 ssh-add ~/.ssh/id_rsa                                       # add key to id_rsa
-ssh-keygen -f ~/.ssh/id_rsa -p                              # change passphrase
+ssh-keygen -f ~/.ssh/id_rsa -p                              # (optional) change passphrase
+
+# New key gen scheme
+ssh-keygen -t ecdsa -b 521
 
 # Merging somebody else's fork
 git remote add OTHER_REPO OTHER_URL     # Add additional remote
