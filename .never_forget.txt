@@ -22,6 +22,7 @@ groupmod -g GID group                   # change GID of group
 gpasswd -a USER GROUP                   # add awdeorio to audio group
 smbpasswd -a USER                       # new Samba user
 chsh -s /usr/local/bin/bash USER        # change default shell
+chsh -s /bin/bash                       # change default shell (updated)
 id                                      # print user and group ID #'s
 id -un                                  # print effective user name
 id -gn                                  # print effective group name
