@@ -106,6 +106,7 @@ alias forgot='vim ~/.never_forget.txt'
 alias weather='curl -X GET http://wttr.in/'
 alias git3='git add -A && git commit && git push'
 alias git2='git add -A && git commit'
+alias cut='cut -c1-330'
 
 # When running gdb or python, run quietly to hide liscensing information
 alias gdb='gdb -q'
